@@ -1,7 +1,7 @@
 FROM openjdk:22-jdk-slim
 
-WORKDIR /src/main/java
+WORKDIR /app
 
-COPY target/HelloWorld.jar Main.jar
+COPY target/HelloWorld-0.0.1-SNAPSHOT.jar /app/Main.jar
 
-ENTRYPOINT ["java", "-jar", "Main.jar"]
+CMD ["java", "-jar", "Main.jar"]

@@ -4,4 +4,23 @@
   <artifactId>HelloWorld</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>HelloWorld</name>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        <mainClass>Main</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
 </project>
